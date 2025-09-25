@@ -1,5 +1,5 @@
 Flask
-Werkzeug
+werkzeug<=2.0.3
 Flask-SQLAlchemy
 Flask-Migrate
 Flask-Login
@@ -8,4 +8,5 @@ email-validator
 Flask-Babel
 Flask-Admin
 WTForms-SQLAlchemy
+
 python-dotenv
