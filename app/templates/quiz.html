@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ _('Quiz') }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1 class="text-center mb-4">{{ _('ALA Term Quiz') }}</h1>
+        <div class="card quiz-card">
+            <div class="card-body p-4">
+                <p class="lead mb-4">{{ _('What is the definition of') }} <strong>"{{ question.term }}"</strong>?</p>
+                <div id="quiz-options" class="d-grid gap-3">
+                    {% for option in options %}
+                    <button class="btn btn-outline-secondary btn-lg option-btn" data-correct="{{ 'true' if option.id == question.id else 'false' }}">
+                        {{ option.get_translation(current_lang) }}
+                    </button>
+                    {% endfor %}
+                </div>
+                <div id="feedback" class="mt-4"></div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{{ url_for('main.quiz') }}" class="btn btn-success btn-lg">{{ _('Next Question') }} &raquo;</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.querySelectorAll('.option-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const isCorrect = this.dataset.correct === 'true';
+        const feedbackEl = document.getElementById('feedback');
+        
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.disabled = true;
+            btn.classList.remove('btn-outline-secondary');
+        });
+
+        if (isCorrect) {
+            this.classList.add('btn-success');
+            feedbackEl.innerHTML = `<div class="alert alert-success">{{ _('Correct!') }}</div>`;
+        } else {
+            this.classList.add('btn-danger');
+            feedbackEl.innerHTML = `<div class="alert alert-danger">{{ _('Incorrect. Try the next one!') }}</div>`;
+            document.querySelector('.option-btn[data-correct="true"]').classList.add('btn-success');
+        }
+    });
+});
+</script>
+{% endblock %}

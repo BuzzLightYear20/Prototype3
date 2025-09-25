@@ -1,0 +1,122 @@
+# French translations for this app.
+# Copyright (C) 2025
+# This file is distributed under the same license as the app package.
+# 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: app 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-21 17:00+0000\n"
+"PO-Revision-Date: 2025-09-21 17:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"Language-Team: fr <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: app/forms.py:10 app/templates/auth/login.html:18
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: app/forms.py:11 app/templates/auth/login.html:24
+msgid "Password"
+msgstr "Mot de passe"
+
+#: app/forms.py:12 app/templates/auth/login.html:30
+msgid "Remember Me"
+msgstr "Se souvenir de moi"
+
+#: app/forms.py:13 app/templates/auth/login.html:5
+msgid "Sign In"
+msgstr "Connexion"
+
+#: app/forms.py:17 app/templates/auth/signup.html:24
+msgid "Email"
+msgstr "Email"
+
+#: app/forms.py:19 app/templates/auth/signup.html:36
+msgid "Repeat Password"
+msgstr "Répéter le mot de passe"
+
+#: app/forms.py:21
+msgid "Register"
+msgstr "S'inscrire"
+
+#: app/forms.py:35 app/templates/suggest.html:16
+msgid "Term"
+msgstr "Terme"
+
+#: app/forms.py:36 app/templates/suggest.html:20
+msgid "Category"
+msgstr "Catégorie"
+
+#: app/forms.py:37 app/templates/suggest.html:24
+msgid "Definition"
+msgstr "Définition"
+
+#: app/forms.py:38
+msgid "Submit Suggestion"
+msgstr "Soumettre la suggestion"
+
+#: app/templates/layout.html:5
+msgid "Home"
+msgstr "Accueil"
+
+#: app/templates/layout.html:6
+msgid "Dictionary"
+msgstr "Dictionnaire"
+
+#: app/templates/layout.html:7 app/templates/quiz.html:5
+msgid "Quiz"
+msgstr "Quiz"
+
+#: app/templates/layout.html:9
+msgid "My Favorites"
+msgstr "Mes favoris"
+
+#: app/templates/layout.html:10
+msgid "Suggest a Term"
+msgstr "Suggérer un terme"
+
+#: app/templates/layout.html:12
+msgid "Admin Panel"
+msgstr "Panneau d'administration"
+
+#: app/templates/layout.html:19
+msgid "Language"
+msgstr "Langue"
+
+#: app/templates/layout.html:27
+msgid "Login"
+msgstr "Connexion"
+
+#: app/templates/layout.html:28 app/templates/auth/signup.html:5
+msgid "Sign Up"
+msgstr "S'inscrire"
+
+#: app/templates/layout.html:31
+msgid "Hello"
+msgstr "Bonjour"
+
+#: app/templates/layout.html:32
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: app/templates/index.html:10
+msgid "Get Started"
+msgstr "Commencer"
+
+#: app/templates/index.html:12
+msgid "Explore the Dictionary"
+msgstr "Explorer le dictionnaire"
+
+#: app/templates/dictionary.html:6
+msgid "Search for a term..."
+msgstr "Rechercher un terme..."
+
+#: app/templates/dictionary.html:13
+msgid "Filter"
+msgstr "Filtrer"

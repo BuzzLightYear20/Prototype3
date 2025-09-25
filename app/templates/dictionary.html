@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ _('Dictionary') }}{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">{{ _('ALA Dictionary') }}</h1>
+
+<form method="get" action="{{ url_for('main.dictionary') }}" class="row g-3 mb-4">
+    <div class="col-md-6"><input type="text" name="query" class="form-control" placeholder="{{ _('Search for a term...') }}" value="{{ request.args.get('query', '') }}"></div>
+    <div class="col-md-4">
+        <select name="category" class="form-select">
+            <option value="All">{{ _('All Categories') }}</option>
+            {% for category in categories %}<option value="{{ category }}" {% if category == selected_category %}selected{% endif %}>{{ _(category) }}</option>{% endfor %}
+        </select>
+    </div>
+    <div class="col-md-2"><button type="submit" class="btn btn-primary w-100">{{ _('Filter') }}</button></div>
+</form>
+
+<div class="accordion" id="termsAccordion">
+    {% for term in terms %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading-{{ term.id }}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ term.id }}">
+                <strong>{{ term.term }}</strong>&nbsp;<span class="badge bg-secondary fw-normal">{{ term.category }}</span>
+                {% if current_user.is_authenticated %}
+                <span class="ms-auto favorite-icon" data-term-id="{{ term.id }}" title="{{ _('Add to favorites') }}">
+                    <i class="bi {% if term.id in favorite_ids %}bi-star-fill text-warning{% else %}bi-star{% endif %}"></i>
+                </span>
+                {% endif %}
+            </button>
+        </h2>
+        <div id="collapse-{{ term.id }}" class="accordion-collapse collapse" data-bs-parent="#termsAccordion">
+            <div class="accordion-body">
+                <p>{{ term.get_translation(current_lang) }}</p>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p class="text-muted">{{ _('No terms found matching your criteria.') }}</p>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% if current_user.is_authenticated %}
+<script>
+document.querySelectorAll('.favorite-icon').forEach(icon => {
+    icon.addEventListener('click', function(event) {
+        event.stopPropagation();
+        const termId = this.dataset.termId;
+        const starIcon = this.querySelector('i');
+        fetch(`/toggle_favorite/${termId}`, { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            if (starIcon.classList.contains('bi-star')) {
+                starIcon.classList.replace('bi-star', 'bi-star-fill');
+                starIcon.classList.add('text-warning');
+            } else {
+                starIcon.classList.replace('bi-star-fill', 'bi-star');
+                starIcon.classList.remove('text-warning');
+            }
+        });
+    });
+});
+</script>
+{% endif %}
+{% endblock %}

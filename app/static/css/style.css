@@ -1,0 +1,120 @@
+/* --- Global & Layout Styling --- */
+:root {
+    --ala-maroon: #800000;
+    --ala-maroon-dark: #660000;
+    --ala-maroon-light: #a04040;
+    --light-gray-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--light-gray-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.container {
+    flex: 1;
+}
+
+/* Wrapper for main content to give it a card-like feel */
+.content-wrapper {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+}
+
+/* --- Navbar Revamp --- */
+.navbar-dark.bg-dark {
+    background-color: var(--ala-maroon) !important;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    transition: background-color 0.2s ease-in-out;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.375rem;
+    margin: 0 0.25rem;
+}
+
+/* Highlight the active page in the navbar */
+.nav-item .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    border: none;
+}
+
+/* --- Card & Form Styling --- */
+.card {
+    border: none;
+    box-shadow: var(--shadow-sm);
+    border-radius: 0.75rem;
+}
+
+.form-container {
+    max-width: 480px;
+    margin: 2rem auto;
+}
+
+/* --- Button Styling --- */
+.btn-primary {
+    background-color: var(--ala-maroon);
+    border-color: var(--ala-maroon);
+}
+
+.btn-primary:hover {
+    background-color: var(--ala-maroon-dark);
+    border-color: var(--ala-maroon-dark);
+}
+
+/* --- Dictionary Accordion Revamp --- */
+.accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem !important;
+    margin-bottom: 0.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: var(--ala-maroon-light);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(128, 0, 0, 0.25);
+}
+
+/* --- Quiz Revamp --- */
+.quiz-card {
+    border-left: 5px solid var(--ala-maroon);
+}
+
+.option-btn {
+    text-align: left;
+    padding: 1rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}

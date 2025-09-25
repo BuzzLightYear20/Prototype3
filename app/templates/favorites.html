@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ _('My Favorites') }}{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">{{ _('My Favorite Terms') }}</h1>
+
+{% if terms %}
+<div class="list-group">
+    {% for term in terms %}
+    <div class="list-group-item">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ term.term }}</h5>
+            <small class="text-muted">{{ term.category }}</small>
+        </div>
+        <p class="mb-1">{{ term.get_translation(current_lang) }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-info">
+    {{ _("You haven't favorited any terms yet. Click the star icon next to a term in the dictionary to add it to this list.") }}
+</div>
+{% endif %}
+{% endblock %}

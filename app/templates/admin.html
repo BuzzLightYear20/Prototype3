@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Admin Panel{% endblock %}
+{% block content %}
+<h1 class="mb-4">Admin Panel - Term Suggestions</h1>
+{% if suggestions %}
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Term</th>
+<th>Category</th>
+<th>Definition</th>
+<th>Submitted By</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+{% for suggestion in suggestions %}
+<tr>
+<td>{{ suggestion.term }}</td>
+<td>{{ suggestion.category }}</td>
+<td>{{ suggestion.definition }}</td>
+<td>{{ suggestion.submitted_by }}</td>
+<td>
+<form action="{{ url_for('main.approve_suggestion', suggestion_id=suggestion.id) }}" method="post">
+<button type="submit" class="btn btn-success btn-sm">Approve</button>
+</form>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% else %}
+<div class="alert alert-info">
+There are no pending suggestions to review.
+</div>
+{% endif %}
+{% endblock %}
+```

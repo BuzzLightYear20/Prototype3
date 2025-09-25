@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "term": "Honour Council",
+    "category": "Disciplinary Bodies",
+    "definition_en": "A student-led body responsible for handling repeated category 1 infractions and first-offence category 2 infractions, promoting a culture of peer accountability.",
+    "definition_fr": "Un organe dirigé par des étudiants, chargé de traiter les infractions répétées de catégorie 1 et les premières infractions de catégorie 2, promouvant une culture de responsabilité par les pairs.",
+    "definition_pt": "Um órgão liderado por estudantes, responsável por lidar com infrações repetidas de categoria 1 e infrações de primeira ofensa de categoria 2, promovendo uma cultura de responsabilidade entre pares.",
+    "definition_sw": "Baraza linaloongozwa na wanafunzi lenye jukumu la kushughulikia makosa ya mara kwa mara ya kategoria ya 1 na makosa ya kwanza ya kategoria ya 2, likikuza utamaduni wa uwajibikaji wa rika."
+  },
+  {
+    "id": 2,
+    "term": "AOD (Adult on Duty)",
+    "category": "Acronyms and Jargon",
+    "definition_en": "The designated staff member responsible for student welfare and emergencies outside of regular school hours.",
+    "definition_fr": "Le membre du personnel désigné responsable du bien-être des étudiants et des urgences en dehors des heures de classe régulières.",
+    "definition_pt": "O membro da equipe designado, responsável pelo bem-estar dos alunos e por emergências fora do horário escolar regular.",
+    "definition_sw": "Mwalimu aliyepewa jukumu la ustawi wa wanafunzi na dharura nje ya masaa ya kawaida ya shule."
+  },
+  {
+    "id": 3,
+    "term": "Cashless Campus",
+    "category": "Campus Life Concepts",
+    "definition_en": "A system where all on-campus transactions are made using a student ID card or a pre-loaded account, eliminating the need for physical cash.",
+    "definition_fr": "Un système où toutes les transactions sur le campus sont effectuées à l'aide d'une carte d'étudiant ou d'un compte préchargé, éliminant le besoin d'argent liquide.",
+    "definition_pt": "Um sistema onde todas as transações no campus são feitas usando um cartão de identificação de estudante ou uma conta pré-carregada, eliminando a necessidade de dinheiro físico.",
+    "definition_sw": "Mfumo ambapo miamala yote ya chuoni hufanywa kwa kutumia kadi ya kitambulisho cha mwanafunzi au akaunti iliyopakiwa awali, kuondoa hitaji la pesa taslimu."
+  },
+  {
+    "id": 4,
+    "term": "Taalu",
+    "category": "Signature Events",
+    "definition_en": "The official opening ceremony of the academic year at ALA, marking the formal welcome of new students into the community.",
+    "definition_fr": "La cérémonie d'ouverture officielle de l'année académique à l'ALA, marquant l'accueil formel des nouveaux étudiants dans la communauté.",
+    "definition_pt": "A cerimônia de abertura oficial do ano acadêmico na ALA, marcando a recepção formal de novos alunos na comunidade.",
+    "definition_sw": "Sherehe rasmi ya ufunguzi wa mwaka wa masomo katika ALA, kuashiria kukaribishwa rasmi kwa wanafunzi wapya katika jamii."
+  },
+  {
+    "id": 5,
+    "term": "Umuzi",
+    "category": "Signature Events",
+    "definition_en": "The annual Parent Weekend, where parents visit the campus to engage with faculty, staff, and their children's life at the academy.",
+    "definition_fr": "Le week-end annuel des parents, où les parents visitent le campus pour échanger avec les professeurs, le personnel et découvrir la vie de leurs enfants à l'académie.",
+    "definition_pt": "O Fim de Semana dos Pais anual, onde os pais visitam o campus para interagir com o corpo docente, funcionários e a vida de seus filhos na academia.",
+    "definition_sw": "Mwisho wa Juma la Wazazi la kila mwaka, ambapo wazazi hutembelea chuo ili kushirikiana na walimu, wafanyakazi, na maisha ya watoto wao katika akademia."
+  }
+]
